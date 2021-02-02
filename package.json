@@ -15,22 +15,25 @@
     "create": "webpack",
     "build": "webpack --mode production --progress --config webpack.config.js",
     "dev-build": "webpack --progress -d --config webpack.config.js",
-    "watch": "webpack --progress -d --config webpack.config.js --watch"
+    "watch": "webpack --progress -d --config webpack.config.js --watch",
+    "stats": "webpack-bundle-analyzer stats.json"
   },
   "dependencies": {
-    "axios": "^0.21.1",
-    "ml5": "^0.6.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
+    "axios": "^0.21.1",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.0.1",
     "html-webpack-plugin": "^4.5.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "style-loader": "^2.0.0",
     "webpack": "^5.19.0",
     "webpack-cli": "^4.4.0",
     "webpack-dev-server": "^3.11.2"
+  },
+  "devDependencies": {
+    "webpack-bundle-analyzer": "^4.4.0"
   }
 }

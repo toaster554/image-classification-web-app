@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import * as ml5 from "ml5";
 
 function Image(props) {
     function handleChange(event) {
