@@ -35,5 +35,6 @@
   },
   "devDependencies": {
     "webpack-bundle-analyzer": "^4.4.0"
-  }
+  },
+  "proxy": "http://localhost:8080"
 }
