@@ -1,6 +1,11 @@
 h1 {
     margin: 0 0 1.4rem;
   }
+
+  .Image{
+    margin: auto;
+    text-align: center;
+  }
   
   .App {
     padding: 1rem 0;
@@ -12,13 +17,13 @@ h1 {
   }
   
   .App div {
-    background-color: #eff6fe;
-    width: 300px;
-    padding: 10px 50px;
+    background-color: #ffffff;
+    /*width: 300px;
+    padding: 10px 50px;*/
   }
   
   .App div:nth-of-type(odd) {
-    background-color: #dfeeff;
+    background-color: #ffffff;
   }
   
   div.loader {
