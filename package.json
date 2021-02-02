@@ -21,9 +21,7 @@
     "axios": "^0.21.1",
     "ml5": "^0.6.0",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
-  },
-  "devDependencies": {
+    "react-dom": "^17.0.1",
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
