@@ -20,10 +20,12 @@ function Image(props) {
                         <h3>Click on the image to upload a new one.</h3>
                     </div>
                 )
-                : (
+                : (props.modelReady ?
                     <h3 type="button" class="btn btn-outline-secondary">
                         Upload an image to see magic happens!
                     </h3>
+                    :
+                    <h3>Loading model...</h3>
                 )}
             </label>
             <input type="file" id="upload-button" style={{ display: 'none' }}
@@ -37,9 +39,11 @@ function App() {
     const [predictions, setPredictions] = useState([]);
     const [image, setImage] = useState({ preview: "", raw: "" });
     const classifier = ml5.imageClassifier('MobileNet', modelLoaded);
+    const [modelReady, setModelReady] = useState(false);
 
     function modelLoaded() {
         console.log('Model Loaded!');
+        setModelReady(true);
     }
 
     function classifyImg() {
@@ -61,7 +65,7 @@ function App() {
     return (
         <div className="App">
             <h1>Image Classifcation with ml5.js</h1>
-            <Image image={image} setImage={setImage}/>
+            <Image image={image} setImage={setImage} modelReady={modelReady}/>
             {predictions.length ? <h2>Top Predictions</h2>:<h2></h2>}
             <ol>
                 {predictions.map(prediction => <li key={prediction.label}>
