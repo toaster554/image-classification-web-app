@@ -6,6 +6,10 @@ h1 {
     margin: auto;
     text-align: center;
   }
+
+  #canvas {
+    border-style: solid;
+  }
   
   .App {
     padding: 1rem 0;
